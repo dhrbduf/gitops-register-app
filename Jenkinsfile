@@ -11,14 +11,13 @@ pipeline {
                 cleanWs()
             }
         }
-    }
 
-    stage("Checkout from SCM") {
-        steps {
-            git branch: 'main', credentialsId: 'github', url: 'https://github.com/dhrbduf/gitops-register-app'
+        stage("Checkout from SCM") {
+            steps {
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/dhrbduf/gitops-register-app'
+            }
         }
+
+
     }
-
-
-    
 }
